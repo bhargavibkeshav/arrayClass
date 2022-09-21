@@ -11,7 +11,7 @@ public:
         log_num = num;
         if(log_num==1)
         {
-            cout<<"array index out of bounds";
+            cout<<"array index out of bounds.";
         }
     }
 };
