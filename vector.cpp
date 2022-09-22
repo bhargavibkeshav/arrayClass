@@ -40,6 +40,14 @@ class Vector
         m_data[m_size] = value;
         m_size++;
     }
+    void popBack()
+    {
+        if(m_size< m_cap/2)
+        {
+            Realloc(m_cap - (m_cap/2));
+        }
+        m_size--;
+    }
     size_t Size() const
     {
         return m_size;
@@ -76,5 +84,16 @@ int main()
     v.pushBack(5);
     v.pushBack(2);
     v.pushBack(1);
-    cout<<v[0]<<" "<<v[1]<<" "<<v[2]<<" "<<v.Size();
+    v.pushBack(5);
+    v.pushBack(2);
+    v.pushBack(1);
+    v.popBack();
+    v.popBack();
+    v.popBack();
+    v.popBack();
+    for(int i =0;i<v.Size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl<<v.Size();
 }
