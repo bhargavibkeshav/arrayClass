@@ -56,11 +56,16 @@ class Vector
     {
         return m_data[index];
     }
-    const at(size_t index) const
+    const T& at(size_t index) const
     {
         return m_data[index];
     }
-
+    const void swap(T* val1, T* val2)
+    {
+        T t = *val1;
+        *val1 = *val2;
+        *val2 = t;
+    }
 
 };
 
